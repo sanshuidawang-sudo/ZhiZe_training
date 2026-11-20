@@ -1,0 +1,52 @@
+# ===== Python 虚拟环境 (conda / uv / venv) =====
+ai-env/
+.venv*/
+venv/
+env/
+ENV/
+
+# ===== Python 缓存、编译文件 =====
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ===== 数据集、大模型权重（重点！超过GitHub限制不提交）=====
+datasets/
+data/
+checkpoints/
+weights/
+*.ckpt
+*.pth
+*.bin
+*.safetensors
+
+# ===== Jupyter 缓存、日志 =====
+.ipynb_checkpoints/
+*.log
+logs/
+
+# ===== VSCode 本地配置（可选）=====
+.vscode/
+*.swp
+*.swo
+
+# ===== 系统垃圾文件 =====
+.DS_Store
+Thumbs.db

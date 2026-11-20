@@ -1,0 +1,52 @@
+虚拟机网络连通性
+cp /etc/apt/sources.list old_sources.list  ##备份源
+sudo vi /etc/apt/sources.list              ##更改配置
+：%d                                       #清除现有内容
+
+##中科大源镜像
+deb https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+
+：wq                        ##保存并退出
+sudo apt update             ##软件包索引更新
+sudo apt-get install git    ##下载git验证速度提升
+
+.gitignore相关语法
+*.log          # 所有 .log 文件
+test.txt       # 名字叫 test.txt 的文件
+build/         # build 整个文件夹（末尾 / 代表目录）
+/tmp           # 只忽略根目录下的 tmp，子目录 tmp 不忽略
+!keep.txt      # 取反：不要忽略 keep.txt（放在后面优先级高）
+**/temp        # 递归所有层级里的 temp 文件/文件夹
+
+shell命令
+# 查看当前在哪（打印当前路径）
+pwd
+# 列出当前文件夹里的文件
+ls
+ls -l    # 详细信息
+ls -a    # 显示隐藏文件（带.开头，比如.gitignore）
+
+# 切换目录 cd (change directory)
+cd src          # 进入src文件夹
+cd ..           # 返回上一级
+cd ~            # 回到用户家目录
+
+# 创建、删除文件夹
+mkdir testdir
+rmdir testdir   # 删除空文件夹
+rm -r testdir   # 删除文件夹+里面所有东西（慎用！）
+
+# 文件操作
+touch test.py              # 新建空文件test.py
+cp test.py test_bak.py     # 复制文件
+mv test.py src/test.py     # 移动/重命名文件
+cat test.py                # 查看文件内容
+nano test.py               # 简易编辑器打开文件（Ctrl+O保存，Ctrl+X退出）
+
+# 系统、查看进程
+whoami                     # 看当前用户名
+uname -a                   # 查看系统版本（Ubuntu内核）
+clear                      # 清屏
