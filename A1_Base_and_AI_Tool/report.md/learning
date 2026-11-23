@@ -50,3 +50,10 @@ nano test.py               # 简易编辑器打开文件（Ctrl+O保存，Ctrl+X
 whoami                     # 看当前用户名
 uname -a                   # 查看系统版本（Ubuntu内核）
 clear                      # 清屏
+
+conda与虚拟环境
+conda create -n 文件名 环境==版本号  #创建环境 例conda create -n text python==3.9
+conda activate 文件名   #激活环境 例conda activate text
+conda deactivate 文件名 #关闭环境 例conda deactivate text
+conda env list  #查看环境
+conda remove -n 文件名 --all #删除环境 例conda remove text --all
